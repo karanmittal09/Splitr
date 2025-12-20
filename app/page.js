@@ -5,7 +5,7 @@ import Header from "@/components/header";
 
 export default function Home() {
   return (
-    <div>
+    <div className="pt-16">
       Karan Mittal
       <Header/>
       
