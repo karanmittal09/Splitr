@@ -59,14 +59,14 @@ export default defineSchema({
       note: v.optional(v.string()),
       date: v.number(),
       paidByUserId: v.id("users"), // Reference to users table
-      recievedByUserId: v.id("users"), // Reference to users table
+      receivedByUserId: v.id("users"), // Reference to users table
       groupId: v.optional(v.id("groups")), // Null or undefined for 1 to 1 settlements
       relatedExpenseId: v.optional(v.array(v.id("expenses"))), // Reference to an expense if applicable
       createdBy: v.id("users"), // Reference to users table
     })
     .index("by_group", ["groupId"])
     .index("by_user_and_group", ["paidByUserId", "groupId"])
-    .index("by_reciever_and_group", ["recievedByUserId", "groupId"])
+    .index("by_receiver_and_group", ["receivedByUserId", "groupId"])
     .index("by_date", ["date"]),
 
 });
