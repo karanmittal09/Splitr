@@ -143,8 +143,8 @@ import { FEATURES, STEPS, TESTIMONIALS } from "@/lib/landing";
 
 export default function Home() {
   return (
-    <>
-    <Header/>
+    // <>
+    // <Header/>
     <div className="flex flex-col pt-16">
       {/* ───── Hero ───── */}
       <section className="mt-20 pb-12 space-y-10 md:space-y-15 px-5">
@@ -317,6 +317,6 @@ export default function Home() {
         © {new Date().getFullYear()} Splitr. All rights reserved.
       </footer>
     </div>
-    </>
+    // </>
   );
 }
