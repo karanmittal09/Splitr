@@ -383,23 +383,31 @@ export default function SettlementForm({ entityType, entityData, onSuccess }) {
 
             {/* Amount */}
             <div className="space-y-2">
-              <Label htmlFor="amount">Amount</Label>
-              <div className="relative">
-                <span className="absolute left-3 top-2.5">$</span>
-                <Input
-                  id="amount"
-                  placeholder="0.00"
-                  type="number"
-                  step="0.01"
-                  min="0.01"
-                  className="pl-7"
-                  {...register("amount")}
-                />
-              </div>
-              {errors.amount && (
-                <p className="text-sm text-red-500">{errors.amount.message}</p>
-              )}
-            </div>
+             <Label htmlFor="amount">Amount</Label>
+
+           <div className="relative w-full">
+           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+            $
+           </span>
+
+            <Input
+            id="amount"
+            placeholder="0.00"
+            type="number"
+            step="0.01"
+            min="0.01"
+           className="pl-10"
+           {...register("amount")}
+           />
+          </div>
+
+         {errors.amount && (
+          <p className="text-sm text-red-500">
+          {errors.amount.message}
+          </p>
+          )}
+          
+          </div>
 
             {/* Note */}
             <div className="space-y-2">
